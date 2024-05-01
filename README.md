@@ -103,4 +103,5 @@ Assumption made on top of existing requirement
 - [X] Provide documentation of all your assumptions for any requirements that are not
   explicitly stated in this task
 - [X] Include unit tests to verify the functionality of your code.
+- [X] Demonstrate use of containerization.
 
