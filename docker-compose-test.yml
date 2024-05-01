@@ -10,8 +10,8 @@ services:
     ports:
       - '3310:3306'
     volumes:
-      - spring-boot-jwt-test-db:/var/lib/mysql
+      - aeon-test-db:/var/lib/mysql
 
 
 volumes:
-  spring-boot-jwt-test-db:
+  aeon-test-db:

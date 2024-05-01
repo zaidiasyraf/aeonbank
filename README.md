@@ -11,6 +11,7 @@ Check Backend Engineer Technical Assessment.pdf for the assessment detail
 1. Java17
 2. Mysql 5.7
 
+Dont worry if you dont have or want to install above dependency, You can just use docker compose to run the app. Will require docker and docker compose installed
 
 ### Database
 Database used is Mysql.
@@ -19,19 +20,34 @@ Reason behind choosing mysql
 2. The most popular RDBMS database
 
 ## Config
-Do update application.properties for db config and server port
+Do update application.properties for db config and server port appropriately
 
 ### Build project
-Need to be at root directory. Make sure test.properties config is correct
+Need to be at aeonbank. Make sure test.properties config is correct
 Need to create the database first. Can left it empty as app will update the db with the schema as app start-up
 ```
+cd aeonbank
 ./mvnw clean install
 ```
 
 ### Run the spring boot app
 Need to create the database first. Can left it empty as app will update the db with the schema as app start-up
 ```
+cd aeonbank
 ./mvnw spring-boot:run
+```
+
+### Build the project using containerize db
+Dont have the mysql installed? but want to full build, Not a problem. Just use these
+```
+sudo docker compose -f docker-compose-test.yml up
+cd aeonbank
+mvn clean install
+```
+
+### Run the project with containerize db and app together
+```
+sudo docker compose -f docker-compose.yml up
 ```
 
 ### Documentation
@@ -61,6 +77,8 @@ Assumption made on top of existing requirement
 6. Added new entity called BookBorrower
    1. To record the trail of book being borrowed and returned
 7. Can return a book without need to know the borrower
+8. Add auditor field for each entity. {Date created on, Last Updated on}
+   1. Best practice
 
 
 ## Code structure
