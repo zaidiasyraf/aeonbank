@@ -11,6 +11,7 @@ Check Backend Engineer Technical Assessment.pdf for the assessment detail
 1. Java17
 2. Mysql 5.7
 
+
 ### Database
 Database used is Mysql.
 Reason behind choosing mysql
